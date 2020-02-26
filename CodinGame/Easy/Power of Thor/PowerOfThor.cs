@@ -1,42 +1,50 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace PowerOfThor
 {
+
+    class Point
+    {
+        public int X;
+        public int Y;
+
+        public string MoveTowardsPoint(Point to)
+        {
+            string direction = "";
+
+            if (Y > to.Y)
+            {
+                direction = "N";
+                Y--;
+            }
+            else if (Y < to.Y)
+            {
+                direction = "S";
+                Y++;
+            }
+
+            if (X > to.X)
+            {
+                direction += "W";
+                X--;
+            }
+            else if (X < to.X)
+            {
+                direction += "E";
+                X++;
+            }
+
+            return direction;
+        }
+    }
+
     public class Program
     {
-
-        class Point
-        {
-            public int X;
-            public int Y;
-
-            public string MoveTowardsPoint(Point to)
-            {
-                string direction = "";
-
-                if (Y > to.Y)
-                {
-                    direction = "N";
-                    Y--;
-                }
-                else if (Y < to.Y)
-                {
-                    direction = "S";
-                    Y++;
-                }
-
-                if (X > to.X)
-                {
-                    direction += "W";
-                    X--;
-                }
-                else if (X < to.X)
-                {
-                    direction += "E";
-                    X++;
-                }
-
-                return direction;
-            }
-        }
 
         static void Main(string[] args)
         {
