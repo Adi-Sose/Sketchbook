@@ -7,7 +7,7 @@
       "**/*.exe": true,
       "**/*.csproj": true,
       ".vscode": true,
-      "README.md": true,
+      "**/README.md": true,
       "**/obj" : true,
       "**/bin" : true,
       "**/csproj" : true,
