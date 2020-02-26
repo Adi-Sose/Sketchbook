@@ -7,7 +7,7 @@
             "type": "coreclr",
             "request": "launch",
             "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchpad.dll",
-            "args": [],
+            "args": ["--no-restore"],
             "cwd": "${workspaceFolder}",
             "console": "externalTerminal",
             "stopAtEntry": false,
@@ -25,7 +25,8 @@
                 "args": [
                     "/k",
                     "dotnet run",
-                    "/p:StartupObject=ChuckNorris2.Program",
+                    "--no-restore",
+                    "/p:StartupObject=${fileBasenameNoExtension}.Program",
                     "&",
                     "ECHO.",
                     "&",
@@ -37,7 +38,7 @@
             "linux": {
                 "externalConsole": false,
             },
-            "preLaunchTask": "dotnet-build",
+            "preLaunchTask": "dotnet-build"
         },
         {
             "name": "CPP_LAUNCH",
