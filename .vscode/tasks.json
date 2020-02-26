@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dotnet-build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sketchpad.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "/p:StartupObject=${fileBasenameNoExtension}.Program"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "cpp-compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${relativeFile}",
+                "-o",
+                "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out"
+            ]
+        },
+        {
+            "label": "Hello",
+            "type": "shell",
+            "command": "CLS",
+            "problemMatcher": []
+        }
+    ],
+}

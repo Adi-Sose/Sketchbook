@@ -1,0 +1,93 @@
+{
+    // TODO Configure linux
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CS_DEBUG",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchpad.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "preLaunchTask": "dotnet-build",
+        },
+        {
+            "name": "CS_LAUNCH",
+            "type": "coreclr",
+            "request": "launch",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "windows": {
+                "externalConsole": true,
+                "program": "C:\\Windows\\system32\\cmd.exe",
+                "args": [
+                    "/k",
+                    "dotnet run",
+                    "/p:StartupObject=ChuckNorris2.Program",
+                    "&",
+                    "ECHO.",
+                    "&",
+                    "PAUSE",
+                    "&",
+                    "EXIT"
+                ]
+            },
+            "linux": {
+                "externalConsole": false,
+            },
+            "preLaunchTask": "dotnet-build",
+        },
+        {
+            "name": "CPP_LAUNCH",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "windows": {
+                "externalConsole": true,
+                "program": "C:\\Windows\\system32\\cmd.exe",
+                "args": [
+                    "/k",
+                    "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+                    "&",
+                    "ECHO.",
+                    "&",
+                    "ECHO.",
+                    "&",
+                    "PAUSE",
+                    "&",
+                    "EXIT"
+                ]
+            },
+            "linux": {
+                "externalConsole": false,
+            },
+            "preLaunchTask": "cpp-compile",
+        },
+        {
+            "name": "CPP_DEBUG",
+            "type": "cppdbg",
+            "request": "launch",
+            "stopAtEntry": false,
+            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "windows": {
+                "externalConsole": true,
+                "MIMode": "gdb",
+                "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe",
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "cpp-compile"
+        }
+    ],
+}
