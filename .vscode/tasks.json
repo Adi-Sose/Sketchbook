@@ -8,7 +8,7 @@
             "args": [
                 "build",
                 "--no-restore",
-                "${workspaceFolder}/Sketchpad.csproj",
+                "${workspaceFolder}/Sketchbook.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "/p:StartupObject=${fileBasenameNoExtension}.Program"
