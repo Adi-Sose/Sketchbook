@@ -24,13 +24,11 @@
                 "${relativeFile}",
                 "-o",
                 "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out"
-            ]
-        },
-        {
-            "label": "Hello",
-            "type": "shell",
-            "command": "CLS",
-            "problemMatcher": []
+            ],
+            "linux":{
+                "command": "/usr/bin/clang++",
+            },
+            "problemMatcher" :"$gcc"
         }
     ],
 }

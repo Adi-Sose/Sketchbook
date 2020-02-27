@@ -42,13 +42,13 @@
         },
         {
             "name": "CPP_LAUNCH",
-            "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
+            "type": "cppvsdbg",
+            "externalConsole": true,
             "windows": {
-                "externalConsole": true,
                 "program": "C:\\Windows\\system32\\cmd.exe",
                 "args": [
                     "/k",
@@ -64,7 +64,7 @@
                 ]
             },
             "linux": {
-                "externalConsole": false,
+                "type": "cppdbg"
             },
             "preLaunchTask": "cpp-compile",
         },
@@ -76,10 +76,14 @@
             "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
             "cwd": "${workspaceFolder}",
             "environment": [],
+            "MIMode": "gdb",
             "windows": {
                 "externalConsole": true,
-                "MIMode": "gdb",
                 "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe",
+            },
+            "linux": {      
+                "externalConsole": false,
+                "miDebuggerPath": "/usr/bin/gdb",
             },
             "setupCommands": [
                 {
