@@ -10,8 +10,9 @@
       "**/README.*": true,
       "**/obj" : true,
       "**/bin" : true,
-      "**/csproj" : true,
+      "**/csproj" : true
    },
+   "omnisharp.enableRoslynAnalyzers": true,
    "workbench.sideBar.location": "right",
    "vtools.autoHideBottomBar": true,
    "vtools.autoHideDelay": 0,
