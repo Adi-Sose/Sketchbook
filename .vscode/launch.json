@@ -12,6 +12,9 @@
             "console": "externalTerminal",
             "stopAtEntry": false,
             "preLaunchTask": "dotnet-build",
+            "linux": {
+                "console": "integratedTerminal"
+            }
         },
         {
             "name": "CS_LAUNCH",
@@ -36,7 +39,13 @@
                 ]
             },
             "linux": {
-                "externalConsole": false,
+                "externalConsole": true,
+                "program": "dotnet",
+                "args":[
+                    "run",
+                    "--no-restore",
+                    "/p:StartupObject=${fileBasenameNoExtension}.Program",
+                ]
             },
             "preLaunchTask": "dotnet-build"
         },
