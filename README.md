@@ -18,6 +18,7 @@
 * .NET Core 3.1 SDK
 * Clang
 * gdb
+* Node
 
 ### VS Code
 
