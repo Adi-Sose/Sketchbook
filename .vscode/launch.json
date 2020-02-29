@@ -2,20 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "CS_DEBUG",
-            "type": "coreclr",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
-            "args": ["--no-build"],
-            "cwd": "${workspaceFolder}",
-            "console": "externalTerminal",
-            "stopAtEntry": false,
-            "linux": {
-                "console": "integratedTerminal"
-            },
-            "preLaunchTask": "dotnet-build"
-        },
-        {
             "name": "CS_LAUNCH",
             "type": "coreclr",
             "request": "launch",
@@ -44,6 +30,20 @@
                     "--no-build",
                     "/p:StartupObject=${fileBasenameNoExtension}.Program"
                 ]
+            },
+            "preLaunchTask": "dotnet-build"
+        },
+        {
+            "name": "CS_DEBUG",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
+            "args": ["--no-build"],
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopAtEntry": false,
+            "linux": {
+                "console": "integratedTerminal"
             },
             "preLaunchTask": "dotnet-build"
         },
@@ -98,6 +98,25 @@
                 }
             ],
             "preLaunchTask": "cpp-compile"
+        },
+        {
+            "name": "JS_LAUNCH",
+            "type": "coreclr",
+            "request": "launch",
+            "console": "externalTerminal",
+            "program": "node",
+            "args" :["${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "JS_DEBUG",
+            "type": "node",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "runtimeArgs": ["--inspect-brk"],
+            "args": ["--debug-brk"],
+            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"
         }
-    ],
+    ]
 }
