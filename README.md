@@ -13,11 +13,15 @@
 3. Run `mingw-get.exe install gdb` in cmd
 4. View Advanced system settings -> Environment variables -> Path - > Add `C:\MinGW\bin`
 
+#### Node.js
+1. Download and install from [this link](https://nodejs.org/dist/v12.16.1/node-v12.16.1-x64.msi)
+
 ### Linux
  
 * .NET Core 3.1 SDK
 * Clang
 * gdb
+* Node
 
 ### VS Code
 
