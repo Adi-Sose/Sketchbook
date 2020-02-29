@@ -33,3 +33,5 @@
   * C#
   * Roslynator
   * [Auto-Launch Profile](https://docs.google.com/uc?export=download&id=1exsOT6VAjH5oqem4id3KWKiRXXEI80jn)
+  * Python
+  * Java
