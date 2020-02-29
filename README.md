@@ -16,6 +16,9 @@
 #### Node.js
 1. Download and install from [this link](https://nodejs.org/dist/v12.16.1/node-v12.16.1-x64.msi)
 
+#### Python
+1. Download and install from [this link](https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tar.xz)
+
 ### Linux
  
 * .NET Core 3.1 SDK
@@ -30,3 +33,5 @@
   * C#
   * Roslynator
   * [Auto-Launch Profile](https://docs.google.com/uc?export=download&id=1exsOT6VAjH5oqem4id3KWKiRXXEI80jn)
+  * Python
+  * Java
