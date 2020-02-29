@@ -7,11 +7,11 @@ using System.Collections.Generic;
 
 namespace ChuckNorris
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            
+
             string MESSAGE = Console.ReadLine();
 
             List<bool> fullBitArray = new List<bool>();

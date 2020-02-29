@@ -2,7 +2,7 @@ using System;
 
 namespace ASCIIArt
 {
-    public class Program
+static class Program
     {
         static void Main(string[] args)
         {

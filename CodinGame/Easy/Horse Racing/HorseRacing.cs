@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace HorseRacing
 {
-    public class Program
+    static class Program
     {
         static void Main(string[] args)
         {

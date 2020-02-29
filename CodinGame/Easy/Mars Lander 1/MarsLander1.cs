@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace MarsLander1
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace MimeType
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
@@ -25,7 +25,7 @@ namespace MimeType
                 extensionTypes.Add(EXT.ToLower(), MT);
             }
 
-            List<int> lista = new List<int>{1,2,3};
+            List<int> lista = new List<int> { 1, 2, 3 };
 
             for (int i = 0; i < Q; i++)
             {

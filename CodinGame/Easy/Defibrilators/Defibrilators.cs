@@ -60,7 +60,7 @@ namespace Defibrilators
         public Position Position { get; set; }
     }
 
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

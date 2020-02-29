@@ -42,7 +42,7 @@ namespace TrafficLights
 
     public enum Light { Green, Red }
 
-    public class Program
+    static class Program
     {
         static void Main(string[] args)
         {
