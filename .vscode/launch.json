@@ -2,13 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "CodeLens (Launch) - Test",
-      "request": "launch",
-      "mainClass": "Test",
-      "projectName": "Sketchbook_f571aafb"
-    },
-    {
       "name": "CS_LAUNCH",
       "type": "coreclr",
       "request": "launch",
@@ -169,6 +162,24 @@
       "args": [
         "${file}"
       ]
+    },    
+    {
+      "name": "SH_DEBUG",
+      "type": "bashdb",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "${file}",
+      "args": [],
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "SH_LAUNCH",
+      "type": "coreclr",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "program": "sh",
+      "args": ["${file}"],
+      "console": "externalTerminal"
     }
   ]
 }
