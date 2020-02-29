@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CodeLens (Launch) - Test",
+      "request": "launch",
+      "mainClass": "Test",
+      "projectName": "Sketchbook_f571aafb"
+    },
+    {
       "name": "CS_LAUNCH",
       "type": "coreclr",
       "request": "launch",
@@ -38,7 +45,9 @@
       "type": "coreclr",
       "request": "launch",
       "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
-      "args": ["--no-build"],
+      "args": [
+        "--no-build"
+      ],
       "cwd": "${workspaceFolder}",
       "console": "externalTerminal",
       "stopAtEntry": false,
@@ -116,8 +125,12 @@
       "request": "launch",
       "console": "integratedTerminal",
       "protocol": "inspector",
-      "runtimeArgs": ["--inspect-brk"],
-      "args": ["--debug-brk"],
+      "runtimeArgs": [
+        "--inspect-brk"
+      ],
+      "args": [
+        "--debug-brk"
+      ],
       "program": "${file}",
       "windows": {
         "console": "externalTerminal"
@@ -131,8 +144,7 @@
       "program": "python",
       "args": [
         "${file}"
-      ],
-      "cwd": "${workspaceFolder}"
+      ]
     },
     {
       "name": "PY_DEBUG",
@@ -140,6 +152,23 @@
       "request": "launch",
       "program": "${file}",
       "console": "externalTerminal"
+    },
+    {
+      "type": "java",
+      "name": "JAVA_DEBUG",
+      "request": "launch",
+      "mainClass": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "JAVA_LAUNCH",
+      "type": "coreclr",
+      "request": "launch",
+      "console": "externalTerminal",
+      "program": "java",
+      "args": [
+        "${file}"
+      ]
     }
   ]
 }
