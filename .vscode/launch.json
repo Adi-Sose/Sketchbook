@@ -1,122 +1,145 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CS_LAUNCH",
+      "type": "coreclr",
+      "request": "launch",
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "windows": {
+        "externalConsole": true,
+        "program": "C:\\Windows\\system32\\cmd.exe",
+        "args": [
+          "dotnet run",
+          "--no-build",
+          "/p:StartupObject=${fileBasenameNoExtension}.Program",
+          "&",
+          "ECHO.",
+          "&",
+          "PAUSE",
+          "&",
+          "EXIT"
+        ]
+      },
+      "linux": {
+        "externalConsole": true,
+        "program": "dotnet",
+        "args": [
+          "run",
+          "--no-build",
+          "/p:StartupObject=${fileBasenameNoExtension}.Program"
+        ]
+      },
+      "preLaunchTask": "dotnet-build"
+    },
+    {
+      "name": "CS_DEBUG",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
+      "args": ["--no-build"],
+      "cwd": "${workspaceFolder}",
+      "console": "externalTerminal",
+      "stopAtEntry": false,
+      "linux": {
+        "console": "integratedTerminal"
+      },
+      "preLaunchTask": "dotnet-build"
+    },
+    {
+      "name": "CPP_LAUNCH",
+      "request": "launch",
+      "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "externalConsole": true,
+      "type": "cppdbg",
+      "windows": {
+        "type": "cppvsdbg",
+        "program": "C:\\Windows\\system32\\cmd.exe",
+        "args": [
+          "/k",
+          "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+          "&",
+          "ECHO.",
+          "&",
+          "ECHO.",
+          "&",
+          "PAUSE",
+          "&",
+          "EXIT"
+        ]
+      },
+      "preLaunchTask": "cpp-compile"
+    },
+    {
+      "name": "CPP_DEBUG",
+      "type": "cppdbg",
+      "request": "launch",
+      "stopAtEntry": false,
+      "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "MIMode": "gdb",
+      "windows": {
+        "externalConsole": true,
+        "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe"
+      },
+      "linux": {
+        "externalConsole": false,
+        "miDebuggerPath": "/usr/bin/gdb"
+      },
+      "setupCommands": [
         {
-            "name": "CS_LAUNCH",
-            "type": "coreclr",
-            "request": "launch",
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "windows": {
-                "externalConsole": true,
-                "program": "C:\\Windows\\system32\\cmd.exe",
-                "args": [
-                    "dotnet run",
-                    "--no-build",
-                    "/p:StartupObject=${fileBasenameNoExtension}.Program",
-                    "&",
-                    "ECHO.",
-                    "&",
-                    "PAUSE",
-                    "&",
-                    "EXIT"
-                ]
-            },
-            "linux": {
-                "externalConsole": true,
-                "program": "dotnet",
-                "args":[
-                    "run",
-                    "--no-build",
-                    "/p:StartupObject=${fileBasenameNoExtension}.Program"
-                ]
-            },
-            "preLaunchTask": "dotnet-build"
-        },
-        {
-            "name": "CS_DEBUG",
-            "type": "coreclr",
-            "request": "launch",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
-            "args": ["--no-build"],
-            "cwd": "${workspaceFolder}",
-            "console": "externalTerminal",
-            "stopAtEntry": false,
-            "linux": {
-                "console": "integratedTerminal"
-            },
-            "preLaunchTask": "dotnet-build"
-        },
-        {
-            "name": "CPP_LAUNCH",
-            "request": "launch",
-            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "externalConsole": true,
-            "type": "cppdbg",
-            "windows": {
-                "type": "cppvsdbg",
-                "program": "C:\\Windows\\system32\\cmd.exe",
-                "args": [
-                    "/k",
-                    "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
-                    "&",
-                    "ECHO.",
-                    "&",
-                    "ECHO.",
-                    "&",
-                    "PAUSE",
-                    "&",
-                    "EXIT"
-                ]
-            },
-            "preLaunchTask": "cpp-compile",
-        },
-        {
-            "name": "CPP_DEBUG",
-            "type": "cppdbg",
-            "request": "launch",
-            "stopAtEntry": false,
-            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "MIMode": "gdb",
-            "windows": {
-                "externalConsole": true,
-                "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe",
-            },
-            "linux": {      
-                "externalConsole": false,
-                "miDebuggerPath": "/usr/bin/gdb"
-            },
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "cpp-compile"
-        },
-        {
-            "name": "JS_LAUNCH",
-            "type": "coreclr",
-            "request": "launch",
-            "console": "externalTerminal",
-            "program": "node",
-            "args" :["${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "name": "JS_DEBUG",
-            "type": "node",
-            "request": "launch",
-            "console": "integratedTerminal",
-            "protocol": "inspector",
-            "runtimeArgs": ["--inspect-brk"],
-            "args": ["--debug-brk"],
-            "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.js"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         }
-    ]
+      ],
+      "preLaunchTask": "cpp-compile"
+    },
+    {
+      "name": "JS_LAUNCH",
+      "type": "coreclr",
+      "request": "launch",
+      "console": "externalTerminal",
+      "program": "node",
+      "args": [
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "JS_DEBUG",
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "protocol": "inspector",
+      "runtimeArgs": ["--inspect-brk"],
+      "args": ["--debug-brk"],
+      "program": "${file}",
+      "windows": {
+        "console": "externalTerminal"
+      }
+    },
+    {
+      "name": "PY_LAUNCH",
+      "type": "coreclr",
+      "request": "launch",
+      "console": "externalTerminal",
+      "program": "python",
+      "args": [
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "PY_DEBUG",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "externalTerminal"
+    }
+  ]
 }
