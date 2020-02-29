@@ -7,10 +7,8 @@
             "type": "process",
             "args": [
                 "build",
-                "--no-restore",
                 "${workspaceFolder}/Sketchbook.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
+                "--no-incremental",
                 "/p:StartupObject=${fileBasenameNoExtension}.Program"
             ],
             "problemMatcher": "$msCompile"

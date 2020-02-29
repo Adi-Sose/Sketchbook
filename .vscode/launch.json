@@ -1,5 +1,4 @@
 {
-    // TODO Configure linux
     "version": "0.2.0",
     "configurations": [
         {
@@ -7,14 +6,14 @@
             "type": "coreclr",
             "request": "launch",
             "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/Sketchbook.dll",
-            "args": ["--no-restore"],
+            "args": ["--no-build"],
             "cwd": "${workspaceFolder}",
             "console": "externalTerminal",
             "stopAtEntry": false,
-            "preLaunchTask": "dotnet-build",
             "linux": {
                 "console": "integratedTerminal"
-            }
+            },
+            "preLaunchTask": "dotnet-build"
         },
         {
             "name": "CS_LAUNCH",
@@ -26,9 +25,8 @@
                 "externalConsole": true,
                 "program": "C:\\Windows\\system32\\cmd.exe",
                 "args": [
-                    "/k",
                     "dotnet run",
-                    "--no-restore",
+                    "--no-build",
                     "/p:StartupObject=${fileBasenameNoExtension}.Program",
                     "&",
                     "ECHO.",
@@ -43,8 +41,8 @@
                 "program": "dotnet",
                 "args":[
                     "run",
-                    "--no-restore",
-                    "/p:StartupObject=${fileBasenameNoExtension}.Program",
+                    "--no-build",
+                    "/p:StartupObject=${fileBasenameNoExtension}.Program"
                 ]
             },
             "preLaunchTask": "dotnet-build"
@@ -55,9 +53,10 @@
             "program": "${workspaceFolder}/${relativeFileDirname}/${fileBasenameNoExtension}.out",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "type": "cppvsdbg",
             "externalConsole": true,
+            "type": "cppdbg",
             "windows": {
+                "type": "cppvsdbg",
                 "program": "C:\\Windows\\system32\\cmd.exe",
                 "args": [
                     "/k",
@@ -71,9 +70,6 @@
                     "&",
                     "EXIT"
                 ]
-            },
-            "linux": {
-                "type": "cppdbg"
             },
             "preLaunchTask": "cpp-compile",
         },
@@ -92,7 +88,7 @@
             },
             "linux": {      
                 "externalConsole": false,
-                "miDebuggerPath": "/usr/bin/gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
             },
             "setupCommands": [
                 {
