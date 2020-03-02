@@ -48,7 +48,6 @@
 
    // Tabs
    "workbench.editor.showTabs": true,
-   "workbench.editor.highlightModifiedTabs": true,
    "workbench.editor.tabSizing": "shrink",
 
    // Bars
