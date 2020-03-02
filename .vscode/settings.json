@@ -1,6 +1,10 @@
 {
+   // Theme
    "workbench.colorTheme": "Default Dark+",
    "workbench.iconTheme": "vs-seti",
+   "workbench.sideBar.location": "right",
+   
+   // Exclude files
    "files.exclude": {
       "**/.git": true,
       "**/.gitignore": true,
@@ -13,29 +17,47 @@
       "**/bin" : true,
       "**/csproj" : true
    },
-   "omnisharp.enableRoslynAnalyzers": true,
-   "workbench.sideBar.location": "right",
-   "vtools.autoHideBottomBar": true,
-   "vtools.autoHideDelay": 0,
-   "workbench.editor.showTabs": true,
-   "workbench.activityBar.visible": false,
-   "workbench.statusBar.visible": false,
-   "window.menuBarVisibility": "hidden",
-   "editor.renderControlCharacters": false,
-   "breadcrumbs.enabled": false,
-   "editor.minimap.enabled": false,
-   "borderless.bordertype": "bordersizable",
-   "workbench.statusBar.feedback.visible": false,
+   
+   // Explorer
+   "workbench.tree.indent": 16,
+   "explorer.confirmDragAndDrop": false,
+   "explorer.sortOrder": "type",
+   
+   // Editor
+   "breadcrumbs.enabled": true,
+   "editor.wordWrap": "on",
+   "editor.mouseWheelZoom": true,
+   "editor.acceptSuggestionOnEnter": "off", 
+   
+   // Visual junk
+   "editor.minimap.enabled": false,  
    "editor.hideCursorInOverviewRuler": true,
    "editor.scrollbar.horizontal": "hidden",
    "editor.scrollbar.vertical": "hidden",
-   "workbench.editor.tabSizing": "shrink",
-   "editor.wordWrap": "on",
-   "editor.mouseWheelZoom": true,
    "editor.overviewRulerBorder": false,
-   "explorer.confirmDragAndDrop": false,
+   "editor.renderControlCharacters": false,
+   "vtools.autoHideBottomBar": true,
+   "vtools.autoHideDelay": 0,
+
+   // Cursor
    "editor.cursorSmoothCaretAnimation": true,
    "editor.cursorBlinking": "smooth",
+   
+   // C#
+   "omnisharp.enableRoslynAnalyzers": true,
+
+   // Tabs
+   "workbench.editor.showTabs": true,
+   "workbench.editor.highlightModifiedTabs": true,
+   "workbench.editor.tabSizing": "shrink",
+
+   // Bars
+   "workbench.activityBar.visible": false,
+   "workbench.statusBar.visible": false,
+   "workbench.statusBar.feedback.visible": false,
+   "window.menuBarVisibility": "hidden",
+   
+   // Files associations
    "files.associations": {
       "*.rmd": "markdown",
       "iostream": "cpp",
@@ -102,7 +124,8 @@
       "map": "cpp",
       "xtree": "cpp"
    },
-   "workbench.tree.indent": 16,
+
+   // Debugging and launching
    "autoDebug" : true,
-   "autoLaunch" : true
+   "autoLaunch" : true,
 }
