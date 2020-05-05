@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Pointer position</title>
+</head>
+
+<body class="h-100 pt-4">
+    <div class="w-25 container p-4 border border-dark rounded mt-4">
+        <h2 class="text-center mb-4"> <i class="fas fa-list-ul"></i> Todos <i class="fas fa-list-ul"></i> </h2>
+        <h4 id="Title" class="text-center"></h4>
+        <div class="input-group my-3 ">
+            <div class="input-group-prepend ">
+                <span class="input-group-text ">ID</span>
+            </div>
+            <input id="Id" type="text " class="form-control " disabled/>
+        </div>
+        <div class="input-group my-3 ">
+            <div class="input-group-prepend ">
+                <span class="input-group-text ">User ID</span>
+            </div>
+            <input id="UserId" type="text " class="form-control " disabled/>
+        </div>
+        <div class="input-group my-3 ">
+            <div class="input-group-prepend ">
+                <span class="input-group-text ">Completed</span>
+            </div>
+            <input id="Completed" type="text " class="form-control " disabled/>
+        </div>
+        <div class="d-flex justify-content-center ">
+            <button class="btn btn-lg btn-primary mt-4 " onclick="LoadNextTodo() ">Next</button>
+        </div>
+        <script src="script.js "></script>
+</body>
+
+</html>

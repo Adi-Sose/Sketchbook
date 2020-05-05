@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Calculator</title>
+</head>
+
+<body class="h-100 pt-4">
+    <div class="w-25 container p-4 border border-dark rounded mt-4">
+        <div>
+            <h2 class="text-center mb-4"> <i class="fas fa-calculator"></i> Calculator <i class="fas fa-calculator"></i> </h2>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Number 1</span>
+                </div>
+                <input id="First" type="text" class="form-control" />
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Number 2</span>
+                </div>
+                <input id="Second" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <button onclick="Add()" class="btn btn-lg btn-danger"><i class="fas fa-plus"></i></button>
+            <button onclick="Subtract()" class="btn btn-lg btn-success"><i class="fas fa-minus"></i></button>
+            <button onclick="Multiply()" class="btn btn-lg btn-warning"><i class="fas fa-times"></i></button>
+            <button onclick="Divide()" class="btn btn-lg btn-info"><i class="fas fa-divide"></i></button>
+        </div>
+        <div class="input-group my-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Result</span>
+            </div>
+            <input id="Result" type="text" class="form-control" disabled/>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
